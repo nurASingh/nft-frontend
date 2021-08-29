@@ -56,7 +56,7 @@
 		name:'blog',
 		mounted () {
 			this.$http
-			.get('http://localhost:3000/nft/mynft')
+			.get('https://obscure-earth-56527.herokuapp.com/nft/mynft')
 			.then(response => {
 				this.nfts = response.data
 				console.log("+++++++++++" + this.nfts[0].Contract)
