@@ -36,7 +36,6 @@
 				.get('https://obscure-earth-56527.herokuapp.com/nft/mynft/thedevlab')
 				.then(response => {
 					this.title = response.data
-					console.log("+++++++++++" + this.nfts[0].Contract)
 				})
 			}	
 		}
