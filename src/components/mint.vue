@@ -15,7 +15,7 @@
 		 					
 		 				</textarea>
 		 			</div>
-		 			<button class="btn btn-primary btn-block">Submit</button>
+		 			<button class="btn btn-primary btn-block" v-on:click="mint">Submit</button>
 		 		</div>
 		 	</form>
 		 </div>
@@ -28,6 +28,17 @@
 			return{
 				title:'Mint NFT'
 			}
+		},	
+		 methods: {
+			mint: function (event) {
+				this.title="Successfully Claimed"
+				this.$http
+				.get('https://obscure-earth-56527.herokuapp.com/nft/mynft/thedevlab')
+				.then(response => {
+					this.title = response.data
+					console.log("+++++++++++" + this.nfts[0].Contract)
+				})
+			}	
 		}
 	}
 </script>
